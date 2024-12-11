@@ -24,13 +24,14 @@ public class HelloController {
         return ResponseEntity.internalServerError().body("Oops! Error!");
     }
 
-    
-
-
-
-
-	@GetMapping("/good-morning")
+    @GetMapping("/good-morning")
     public ResponseEntity<String> sayGoodMorning() {
         return ResponseEntity.ok().body("Good Morning!");
     }
+
+    @GetMapping("/hi")
+    public ResponseEntity<String> sayHi() {
+        return ResponseEntity.ok().body("Hi!");
+    }
+
 }
