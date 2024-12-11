@@ -13,4 +13,10 @@ public class HelloController {
     public ResponseEntity<String> sayHello() {
         return ResponseEntity.status(200).body("Hello World!");
     }
+
+    @GetMapping("/goodbye")
+    public ResponseEntity<String> sayGoodbye() {
+        return ResponseEntity.ok().body("Bye!");
+    }
+
 }
