@@ -1,5 +1,6 @@
 package com.git.learn_git.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,12 +27,12 @@ public class HelloController {
 
     @GetMapping("/good-morning")
     public ResponseEntity<String> sayGoodMorning() {
-        return ResponseEntity.ok().body("Good Morning!");
+        return ResponseEntity.status(200).body("Good Morning!");
     }
 
     @GetMapping("/hi")
     public ResponseEntity<String> sayHi() {
-        return ResponseEntity.ok().body("Hi!");
+        return ResponseEntity.status(HttpStatus.OK).body("Hi!");
     }
 
 }
