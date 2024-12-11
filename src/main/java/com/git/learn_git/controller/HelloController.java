@@ -23,4 +23,14 @@ public class HelloController {
     public ResponseEntity<String> saySorry() {
         return ResponseEntity.internalServerError().body("Oops! Error!");
     }
+
+    
+
+
+
+
+	@GetMapping("/good-morning")
+    public ResponseEntity<String> sayGoodMorning() {
+        return ResponseEntity.ok().body("Good Morning!");
+    }
 }
